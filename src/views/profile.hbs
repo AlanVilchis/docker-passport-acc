@@ -1,0 +1,52 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center my-3">
+                <div class="card-body">
+                    <h3>Bienvenido <b>{{user.username}}</b></h3>
+                </div>
+            </div>  
+        </div>
+      </div>
+
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class="card text-center my-3">
+                    <div class="card-body text-left">
+                        <form action="/change-password" method="POST">
+
+                        <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <h4>Cambiar contraseña</h4>
+
+                        </li>
+                        <li class="list-inline-item">
+                            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapsePassword" aria-expanded="false" aria-controls="collapsePassword">
+                            <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </li>
+                        </ul>
+
+                            
+                            <div class="collapse" id="collapsePassword">
+                            <div class="form-group">
+                                <input type="password" name="newPassword" class="form-control" placeholder="Nueva contraseña">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="repeatPassword" class="form-control" placeholder="Repetir nueva contraseña">
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-danger">
+                                    Guardar
+                                </button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

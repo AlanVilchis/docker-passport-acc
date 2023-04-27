@@ -1,0 +1,10 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 50px;
+}
+
+.index {
+    width: 100vw;
+    height: 100vh;
+}
+

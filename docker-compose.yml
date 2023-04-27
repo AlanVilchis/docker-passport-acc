@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mysql-database:
+    build: ./mysql-database
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: itesm
+      MYSQL_DATABASE: itesm502
+    restart: always
+  src:
+    build: ./src
+    environment:
+      MYSQL_DATABASE: itesm502
+      MYSQL_USER: root
+      MYSQL_PASSWORD: itesm
+      MYSQL_HOST: mysql-database
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql-database
+    restart: on-failure
