@@ -2,4 +2,4 @@
 
 docker-compose build --no-cache
 
-docker-compose run
+docker-compose up
